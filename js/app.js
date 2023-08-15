@@ -25,4 +25,16 @@ function createImgHero(){
     }
 }
 
+const navLinks = document.querySelectorAll(".nav_link");
+let navLinkAfter = 0;
+navLinks.forEach((navLink,i)=>{
+    navLink.addEventListener("click",()=>{
+        navLinks[navLinkAfter].classList.remove("active");
+        navLink.classList.add("active");
+        navLinkAfter = i;
+    })
+})
+
+
+
 createImgHero();

@@ -55,7 +55,6 @@ html{
 }
 body{
     font-family: var(--ff-lato);
-    height: 1800vh;
     background-color: var(--bg);
     color:var(--white);
     overflow-x: hidden;
@@ -121,6 +120,14 @@ body{
 .btn:active{
     transform: scale(0.98);
 }
+
+.heading{
+    font-size: 4rem;
+    text-align: center;
+    line-height: 90px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
 /*-----------------------------------*\
     #HEADER
 \*-----------------------------------*/
@@ -179,7 +186,6 @@ body{
     #HERO
 \*-----------------------------------*/
 .hero{
-
     background-image: url(../img/hero-bg.png) ;
     background-attachment: fixed ;
     background-size: 100%;
@@ -209,7 +215,7 @@ body{
     top: 120px;
     pointer-events: none;
     animation: float 3s ease-in-out infinite;
-    z-index: 99;
+    z-index: 9;
 }
 .hero_overlay figure:first-of-type{
     left: 120px;
@@ -271,7 +277,7 @@ body{
     z-index: 99;
     text-align: center;
 }
-.heading{
+h1.heading{
     text-align: center;
     font-size: 5.4rem;
     line-height: 90px;
@@ -287,7 +293,7 @@ body{
 .hero_content .btn{
     font-size: 1.6rem;
     padding: 1rem 3rem;
-    margin-block-start: 30px;
+    margin-block-start: 50px;
     width: fit-content;
     margin-inline: auto;
 }
@@ -297,7 +303,7 @@ body{
     line-height: 28px;
     font-weight: 300;
     width: 35%;
-    margin: 20px 32.5%;
+    margin: 20px auto;
 }
 
 .scroll_btn{
@@ -314,7 +320,7 @@ body{
 \*-----------------------------------*/
 .features{
     padding-top: 80px;
-
+    min-height: 100vh;
 }
 
 .features .heading{
@@ -323,7 +329,7 @@ body{
 }
 .features_content{
     margin-block-start: 3.1rem;
-    padding: 0 1rem;
+    padding: 3.7rem 1rem;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
@@ -373,14 +379,16 @@ body{
 \*-----------------------------------*/
 .offers{
     padding-top: 80px;
+    min-height: 100vh;
 }
 .offers .heading{
     font-size: 4rem;
     margin-top: 1rem;
 }
 
-.offers_container{
+.offer_container{
     margin: 50px;
+    padding: 2rem 0;
 }
 
 .offer_img{
@@ -402,7 +410,7 @@ body{
     width: 100%;
 }
 .offer h4{
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: normal;
 }
 
@@ -418,16 +426,220 @@ body{
     margin-block-start: 20px;
 }
 /*-----------------------------------*\
-    #WORK
+    #partners
+\*-----------------------------------*/
+.partners{
+    padding-top: 80px;
+}
+
+.partners .heading{
+    font-size: 4rem;
+}
+
+.investors_container{
+    padding: 2rem 0;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.investors_container img{
+    width: 280px;
+    pointer-events: none;
+}
+
+.investor{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+    cursor: pointer;
+}
+/*-----------------------------------*\
+    #ACCOUNT
+\*-----------------------------------*/
+.account {
+    padding-top: 80px;
+}
+.account .heading{
+    margin: 1rem;
+    font-size: 4rem;
+}
+.account .section_text{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.account_container{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.account_container >div{
+    flex: 1;
+}
+.account_img{
+    height: 400px;
+    background: url(../img/account-img.png) no-repeat right / contain;
+
+    animation: float 3s ease-in-out infinite;
+}
+.account_content p{
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+
+/*-----------------------------------*\
+    #SUBSCRIBE
 \*-----------------------------------*/
 
+.subscribe{
+    padding-top: 80px;
+    padding: 1rem;
+}
+.subscribe .heading{
+    margin-block: 2rem ;
+}
+.subscribe_container{
+    margin: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
+.subscribe_container img{
+    margin-bottom: 20px;
+    width: 340px;
+    padding: 2rem 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.subscribe_container p{
+    font-size: 1rem;
+}
+.get_notification{
+    border: 1px solid rgba(252, 240, 255, 0.05);
+    background-color: rgba(252, 240, 255, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 2rem .5rem;
+    width: 50%;
+}
+.get_notification input{
+    padding: .9rem 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    outline: none;
+    flex: 3;
+    background: transparent;
+    border: none;
+}
+.get_notification .btn{
+    flex: 1;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.get_notification input::placeholder{
+    color: #bdb9b9;
+}
 /*-----------------------------------*\
     #FOOTER
 \*-----------------------------------*/
+.footer{
+    background: #000;
+    padding: 1rem 1.6rem;
+}
 
-
-
+.footer_menu{
+    width: 20%;
+}
+.footer_menu img{
+    width: 18px;
+    height: 20px;
+}
 /*-----------------------------------*\
     #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (min-width: 2000px){
+    html{
+        font-size: 18px;
+    }
+    .hero_content{
+        top: 210px;
+    }
+    .container{
+        margin: 0 auto ;
+        max-width: 1500px;
+    }
+}
+
+
+@media (max-width:1330px ){
+    .hero_content p{
+        width: 50%;
+    }
+    body .container{
+        margin: 0 2rem ;
+    }
+    .feature{
+        width: 350px;
+        height: 450px;
+    }
+    .feature_img{
+        height: 180px;
+    }
+    .features_content{
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 946px){
+    html{
+        font-size: 90%;
+    }
+    .get_notification{
+        gap: 1rem;
+        justify-content: center;
+        margin: 2rem 1rem;
+        width: 90%;
+    }
+    .btn{
+        padding: .3rem 1rem;
+    }
+    .get_notification input{
+        padding: .4rem 1rem ;
+    }
+    .scroll_btn{
+        margin-top: 50px;
+    }
+    .hero_overlay figure:nth-of-type(2),
+    .hero_overlay figure:nth-of-type(5),
+    .hero_overlay figure:nth-of-type(7){
+        display: none;
+    }
+}
+
+@media (max-width: 740px){
+    html{
+        font-size: 80%;
+    }
+    .hero_content{
+        padding-top: 200px;
+    }
+    .hero_content p{
+        width: 80%;
+    }
+    .hero h1{
+        font-size: 4.5rem;
+        line-height: 1.2;
+    }
+}
