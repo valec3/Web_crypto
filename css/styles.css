@@ -131,7 +131,8 @@ body{
     padding: 1rem 2rem;
     background: rgba(16, 8, 26,0.3);
     z-index: 999;
-    
+    backdrop-filter: blur(40px);
+
     position: fixed;
     top: 0;
     right: 0;
@@ -178,13 +179,14 @@ body{
     #HERO
 \*-----------------------------------*/
 .hero{
+
     background-image: url(../img/hero-bg.png) ;
     background-attachment: fixed ;
     background-size: 100%;
     background-position:center ;
     background-repeat: no-repeat;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     color: var(--text);
 }
 
@@ -263,14 +265,14 @@ body{
 }
 
 .hero_content{
-    position: absolute;
-    top: 150px;
-    left: 0;
+    position: relative;
+    padding-top: 150px;
     width: 100%;
     z-index: 99;
     text-align: center;
 }
-.hero .heading{
+.heading{
+    text-align: center;
     font-size: 5.4rem;
     line-height: 90px;
     letter-spacing: 0.04em;
@@ -308,14 +310,113 @@ body{
     width: 50px;
 }
 /*-----------------------------------*\
-    #SERVICE
+    #FEATURES
 \*-----------------------------------*/
+.features{
+    padding-top: 80px;
 
+}
 
+.features .heading{
+    margin-top: 20px;
+    font-size: 4rem;
+}
+.features_content{
+    margin-block-start: 3.1rem;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.feature{
+    width: 390px;
+    height: 480px;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--primary-1);
+}
+.feature_img{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/features-1.png) ;
+    background-position: center;
+    background-size: 70%;
+    background-repeat:no-repeat;
+    animation: float 3s ease-in-out infinite;
+}
+.feature:nth-of-type(2) .feature_img{
+    background-image: url(../img/features-2.png) ;
+    animation-delay: 1s;
+}
+.feature:nth-of-type(3) .feature_img{
+    background-image: url(../img/features-3.png) ;
+}
+
+.feature h4{
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 1rem 0;
+}
+.feature p{
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.feature:hover{
+    border-color: var(--text);
+    transition: 0.4s linear;
+}
 /*-----------------------------------*\
-    #ABOUT
+    #OFFERS
 \*-----------------------------------*/
+.offers{
+    padding-top: 80px;
+}
+.offers .heading{
+    font-size: 4rem;
+    margin-top: 1rem;
+}
 
+.offers_container{
+    margin: 50px;
+}
+
+.offer_img{
+    width: 48%;
+    height: 460px;
+    background-image: url(../img/offers-img.png);
+    background-size: 70%;
+    background-position: left;
+    background-repeat: no-repeat;
+    animation: float 3s ease-in-out infinite;
+}
+
+.offer_content{
+    width: 48%;
+}
+.offer{
+    /* text-align: left; */
+    margin: 20px 0;
+    width: 100%;
+}
+.offer h4{
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+.offer_text{
+    line-height: 25.6px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(252, 240, 255, 0.6);
+}
+
+.offer p{
+    line-height: 160%;
+    margin-block-start: 20px;
+}
 /*-----------------------------------*\
     #WORK
 \*-----------------------------------*/

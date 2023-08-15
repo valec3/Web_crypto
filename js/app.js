@@ -1,5 +1,16 @@
 console.log("hola")
 
+document.addEventListener("scroll",()=>{
+    let scrollPos = window.scrollY;
+    const header = document.querySelector("#header");
+    if(scrollPos>0){
+        header.classList.add("header_solid")
+    }else{
+        header.classList.remove("header_solid")
+    }
+})
+
+
 
 const heroContent = document.querySelector("#hero-imgs");
 
